@@ -1,1 +1,1 @@
-# CosmosEducationbot
+# Cosmos Education bot
