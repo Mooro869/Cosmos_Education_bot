@@ -23,8 +23,13 @@ planet_btn.add(earth, jupiter, mars, merkury, neptune, plutonium, saturn, uran, 
 
 # Кнопки астронавтов
 astronauts_btn = types.InlineKeyboardMarkup(row_width=3)
-
-astronauts_btn.add()
+gagarin = types.KeyboardButton('Юрий Гагарин', callback_data='gagarin')
+leonov = types.KeyboardButton('Алексей Леонов', callback_data='leonov')
+popovich = types.KeyboardButton('Геннадий Попович', callback_data='popovich')
+krikalev = types.KeyboardButton('Сергей Крикалев', callback_data='krikalev')
+solovev = types.KeyboardButton('Анатолий Соловьев', callback_data='solovev')
+kornienko = types.KeyboardButton('Михаил Корниенко', callback_data='kornienko')
+astronauts_btn.add(gagarin, leonov, popovich, krikalev, solovev, kornienko)
 
 # Кнопки спутников
 satellites_btn = types.InlineKeyboardMarkup(row_width=3)
