@@ -1,6 +1,5 @@
 from aiogram import types
 
-
 # Кнопки при запуске бота
 start_btn = types.ReplyKeyboardMarkup(resize_keyboard=True)
 planet = types.KeyboardButton('Планеты🌘')
@@ -33,5 +32,9 @@ astronauts_btn.add(gagarin, leonov, popovich, krikalev, solovev, kornienko)
 
 # Кнопки спутников
 satellites_btn = types.InlineKeyboardMarkup(row_width=3)
-
-satellites_btn.add()
+sputnik1 = types.KeyboardButton('Спутник-1 (СССР, 1957 г.)', callback_data='sputnik1')
+explorer1 = types.KeyboardButton('Эксплорер-1 (США, 1958 г.)', callback_data='explorer1')
+vostok1 = types.KeyboardButton('Восток-1 (СССР, 1961 г.)', callback_data='vostok1')
+habbl = types.KeyboardButton('Хаббл (США, 1990 г.)', callback_data='habbl')
+gps = types.KeyboardButton('GPS IIR-1 (США, 1997 г.)', callback_data='gps')
+satellites_btn.add(sputnik1, explorer1, vostok1, habbl, gps)

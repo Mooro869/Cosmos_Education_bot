@@ -27,7 +27,7 @@ async def astronauts_command(message: types.Message):
 
 @dp.message_handler(text=['Спутники🛰️'])
 async def satellites_command(message: types.Message):
-    await message.answer(text='', reply_markup=kb.satellites_btn)
+    await message.answer(text='Выберите интересующий вас спутник:', reply_markup=kb.satellites_btn)
 
 
 @dp.callback_query_handler(lambda x: x.data == "earth")
@@ -94,45 +94,80 @@ async def venus(callback_query: types.CallbackQuery):
 
 
 @dp.callback_query_handler(lambda x: x.data == "gagarin")
-async def venus(callback_query: types.CallbackQuery):
+async def gagarin(callback_query: types.CallbackQuery):
     await bot.send_photo(chat_id=callback_query.from_user.id,
                          photo=open(config.astronauts_dict.get('gagarin'), "rb"),
                          caption=config.GAGARIN_DESCRIPTION)
 
 
 @dp.callback_query_handler(lambda x: x.data == "leonov")
-async def venus(callback_query: types.CallbackQuery):
+async def leonov(callback_query: types.CallbackQuery):
     await bot.send_photo(chat_id=callback_query.from_user.id,
                          photo=open(config.astronauts_dict.get('leonov'), "rb"),
                          caption=config.LEONOV_DESCRIPTION)
 
 
 @dp.callback_query_handler(lambda x: x.data == "popovich")
-async def venus(callback_query: types.CallbackQuery):
+async def popovich(callback_query: types.CallbackQuery):
     await bot.send_photo(chat_id=callback_query.from_user.id,
                          photo=open(config.astronauts_dict.get('popovich'), "rb"),
                          caption=config.POPOVICH_DESCRIPTION)
 
 
 @dp.callback_query_handler(lambda x: x.data == "krikalev")
-async def venus(callback_query: types.CallbackQuery):
+async def krikalev(callback_query: types.CallbackQuery):
     await bot.send_photo(chat_id=callback_query.from_user.id,
                          photo=open(config.astronauts_dict.get('krikalev'), "rb"),
                          caption=config.KRIKALEV_DESCRIPTION)
 
 
 @dp.callback_query_handler(lambda x: x.data == "solovev")
-async def venus(callback_query: types.CallbackQuery):
+async def solovev(callback_query: types.CallbackQuery):
     await bot.send_photo(chat_id=callback_query.from_user.id,
                          photo=open(config.astronauts_dict.get('solovev'), "rb"),
                          caption=config.SOLOVEV_DESCRIPTION)
 
 
 @dp.callback_query_handler(lambda x: x.data == "kornienko")
-async def venus(callback_query: types.CallbackQuery):
+async def kornienko(callback_query: types.CallbackQuery):
     await bot.send_photo(chat_id=callback_query.from_user.id,
                          photo=open(config.astronauts_dict.get('kornienko'), "rb"),
                          caption=config.KORNIENKO_DESCRIPTION)
+
+
+@dp.callback_query_handler(lambda x: x.data == "sputnik1")
+async def sputnik1(callback_query: types.CallbackQuery):
+    await bot.send_photo(chat_id=callback_query.from_user.id,
+                         photo=open(config.satellites_dict.get('sputnik1'), "rb"),
+                         caption=config.SPUTNIK1_DESCRIPTION)
+
+
+@dp.callback_query_handler(lambda x: x.data == "explorer1")
+async def explorer1(callback_query: types.CallbackQuery):
+    await bot.send_photo(chat_id=callback_query.from_user.id,
+                         photo=open(config.satellites_dict.get('explorer1'), "rb"),
+                         caption=config.EXPLORER1_DESCRIPTION)
+
+
+@dp.callback_query_handler(lambda x: x.data == "vostok1")
+async def vostok1(callback_query: types.CallbackQuery):
+    await bot.send_photo(chat_id=callback_query.from_user.id,
+                         photo=open(config.satellites_dict.get('vostok1'), "rb"),
+                         caption=config.VOSTOK1_DESCRIPTION)
+
+
+@dp.callback_query_handler(lambda x: x.data == "habbl")
+async def habbl(callback_query: types.CallbackQuery):
+    await bot.send_photo(chat_id=callback_query.from_user.id,
+                         photo=open(config.satellites_dict.get('habbl'), "rb"),
+                         caption=config.HABBL_DESCRIPTION)
+
+
+@dp.callback_query_handler(lambda x: x.data == "gps")
+async def gps(callback_query: types.CallbackQuery):
+    await bot.send_photo(chat_id=callback_query.from_user.id,
+                         photo=open(config.satellites_dict.get('gps'), "rb"),
+                         caption=config.GPS_DESCRIPTION)
 
 
 if __name__ == '__main__':
