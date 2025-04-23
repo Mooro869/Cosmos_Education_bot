@@ -1,4 +1,4 @@
-TOKEN_API = '7788128544:AAGzp06XFM2nfGsA-9wci6l7IQV2JuejqUs'
+TOKEN_API = 'YOUR TOKEN'
 
 START_TEXT = ''' Я твой бот-помощник для изучения космоса!
 Выберите, какую тему вы бы хотели изучить:'''
