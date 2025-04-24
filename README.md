@@ -1,1 +1,0 @@
-# Cosmos Education bot
